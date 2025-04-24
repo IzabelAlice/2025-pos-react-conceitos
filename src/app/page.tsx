@@ -8,7 +8,7 @@ const Titulo = () => (
 );
 
 const SubTitulo = () => (
-	<h2 className="text-4xl font-bold mb-6">Lista de tarefas</h2>
+	<h2 className="text-4xl font-bold mb-7">Lista de tarefas</h2>
 );
 
 function Cabecalho() {
@@ -28,7 +28,7 @@ interface TarefaProps {
 class Tarefa extends React.Component<TarefaProps> {
 	
 	render(): React.ReactNode {
-		const classe = `p-3 mb-3 rounded-lg shadow-md ${this.props.concluido ? "bg-gray-800" : "bg-gray-400"}`;
+		const classe = `p-3 mb-3 rounded-lg shadow-md hover:cursor-pointer hover:border ${this.props.concluido ? "bg-gray-800 hover:border-gray-800" : "bg-gray-400 hover:border-gray-400"}`;
 
 		return (
 			<div className={classe}>
@@ -38,6 +38,7 @@ class Tarefa extends React.Component<TarefaProps> {
 		);
 	}
 }
+
 
 const Home = () => {
 	const tarefas = [
